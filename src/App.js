@@ -1,7 +1,8 @@
 import React from 'react'
-import { HashRouter as Router } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import {
   StatementsOverviewPage,
+  StatementDetailPage,
   translations as statementTranslations
 } from '@pingcap-incubator/statement'
 import * as DashboardClient from '@pingcap-incubator/dashboard_client'
@@ -29,10 +30,18 @@ i18nUtil.addTranslations(statementTranslations)
 const App = () => (
   <Router>
     <div style={{ margin: 12 }}>
-      <StatementsOverviewPage
-        dashboardClient={dashboardClient}
-        detailPagePath="/statement/detail"
-      />
+      <Switch>
+        <Route path="/statement/overview">
+          <StatementsOverviewPage
+            dashboardClient={dashboardClient}
+            detailPagePath="/statement/detail"
+          />
+        </Route>
+        <Route path="/statement/detail">
+          <StatementDetailPage dashboardClient={dashboardClient} />
+        </Route>
+        <Redirect exact from="/" to="/statement/overview" />
+      </Switch>
     </div>
   </Router>
 )
