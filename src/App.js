@@ -9,7 +9,8 @@ import * as DashboardClient from '@pingcap-incubator/dashboard_client'
 import * as authUtil from './auth'
 import * as i18nUtil from './i18n'
 
-import 'antd/dist/antd.css'
+// no need any more
+// import 'antd/dist/antd.css'
 
 const dashboardClient = new DashboardClient.DefaultApi({
   basePath: 'http://127.0.0.1:12333/dashboard/api',
