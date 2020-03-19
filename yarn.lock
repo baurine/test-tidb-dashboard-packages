@@ -1246,33 +1246,43 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@pingcap-incubator/dashboard_client@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@pingcap-incubator/dashboard_client/-/dashboard_client-0.0.6.tgz#99e5b7bcbcc9e1a8f48d8e7f9fc99e170a032b7d"
-  integrity sha512-8drVO2hVH00RESez28LzJxezG8LVhwS2sy5CLDDIIhXUy1vfOh2/Y33qQavvFzrbn1bpb4YW+o/xL7DAjdTlXw==
+"@pingcap-incubator/dashboard_client@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@pingcap-incubator/dashboard_client/-/dashboard_client-0.0.8.tgz#1a58e5fd04ed59ed0ef94afa5c3763cc58d9787e"
+  integrity sha512-WEL8gJMI7KkjEIMJxuiuBOtl9XJwXiJ5P73eKdHMYET96fz27BfrKI3sNfey9JeAZcr9NhYlA1wOBfJcRTMZdg==
   dependencies:
     axios "^0.19.0"
 
-"@pingcap-incubator/keyvis@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@pingcap-incubator/keyvis/-/keyvis-0.0.6.tgz#d602469f46e644706b3be64ce2b51f6f38f6176c"
-  integrity sha512-MuBvCrxv1FrxEFJ9ifNyUFhRXfNUE5cPB1DpoNwA9MjQXDHGE2aXTVsukJPEVxgAGVZuFoNFWVfjBsMAAhXqEw==
+"@pingcap-incubator/dashboard_components@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@pingcap-incubator/dashboard_components/-/dashboard_components-0.0.8.tgz#2fb836abacce48510bf63125b59408e7270773de"
+  integrity sha512-xAeF5QSSBIudmOYj6wnXSEpX2Pfyw7AzwwAxr+c/suicgHLEE9G01/9Ru0yOz/0kYZX7uQA8uVzPwfqVn7WcHg==
+  dependencies:
+    antd "^3.26.5"
+    classnames "^2.2.6"
+
+"@pingcap-incubator/keyvis@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@pingcap-incubator/keyvis/-/keyvis-0.0.8.tgz#48dc53aced5242ae63ef5da12c45bb10942f661a"
+  integrity sha512-3k012eqsLQ7IWq17oxP3TArBLwOjg7t6rGtG6mVm2O6Clb1l9Gk6La8eurbZvE8ANQLgAKyYFlZN0xujConyXQ==
   dependencies:
     "@g07cha/flexbox-react" "^5.0.0"
-    "@pingcap-incubator/dashboard_client" "^0.0.6"
+    "@pingcap-incubator/dashboard_client" "^0.0.8"
+    "@pingcap-incubator/dashboard_components" "^0.0.8"
+    "@use-it/event-listener" "^0.1.3"
     antd "^3.26.5"
     d3 "^5.15.0"
     i18next "^19.1.0"
     lodash "^4.17.15"
     react-i18next "^11.3.2"
 
-"@pingcap-incubator/statement@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@pingcap-incubator/statement/-/statement-0.0.6.tgz#0b257edfbc5dadb37ab89f5036ffee3cc8e12da6"
-  integrity sha512-35okvkVr7iLP+bpt+rt6bB4pTvri3t2Y/FNrBkrLBQwQyxnrfWZvQg9RjG36aTrqGQOSvwZy69kTxydVYResOg==
+"@pingcap-incubator/statement@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@pingcap-incubator/statement/-/statement-0.0.8.tgz#28ff40aff115c51b1f950bb7442a3b28133fd07a"
+  integrity sha512-RylHQ/D9ka2RWA74a511ic/RyiUQmnuqJpUNj/fE6J2qYjOfwpkwoHM9L+tYrmPMDfA6a260deUgWbO1ER+WQg==
   dependencies:
     "@baurine/grafana-value-formats" "^0.1.1"
-    "@pingcap-incubator/dashboard_client" "^0.0.6"
+    "@pingcap-incubator/dashboard_client" "^0.0.8"
     antd "^3.26.5"
     i18next "^19.1.0"
     lodash "^4.17.15"
@@ -1641,6 +1651,11 @@
     lodash "^4.17.15"
     semver "^6.3.0"
     tsutils "^3.17.1"
+
+"@use-it/event-listener@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@use-it/event-listener/-/event-listener-0.1.3.tgz#a9920b2819d211cf55e68e830997546eec6886d3"
+  integrity sha512-UCHkLOVU+xj3/1R8jXz8GzDTowkzfIDPESOBlVC2ndgwUSBEqiFdwCoUEs2lcGhJOOiEdmWxF+T23C5+60eEew==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
