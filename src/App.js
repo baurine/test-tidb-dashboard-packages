@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, Redirect } from 'react-router-dom'
 import {
   // StatementsOverviewPage,
   // StatementDetailPage,
@@ -39,26 +39,12 @@ DashboardClient.getInstance()
 const App = () => (
   <Router>
     <div style={{ margin: 12 }}>
-      <Switch>
-        {/*
-        <Route path="/statement/overview">
-          <StatementsOverviewPage
-            dashboardClient={dashboardClient}
-            detailPagePath="/statement/detail"
-          />
-        </Route>
-        <Route path="/statement/detail">
-          <StatementDetailPage dashboardClient={dashboardClient} />
-        </Route>
-        */}
-        <Route path="/statement">
-          <StatementRootComponent />
-        </Route>
-        <Route path="/keyvis">
-          <KeyVis />
-        </Route>
-        <Redirect exact from="/" to="/statement" />
-      </Switch>
+      <Routes>
+        {/* notice, in v6, the path should be "/statement/*", can't be "/statement" */}
+        <Route path="/statement/*" element={<StatementRootComponent />} />
+        <Route path="/keyvis" element={<KeyVis />} />
+        <Redirect from="/" to="/statement" />
+      </Routes>
     </div>
   </Router>
 )
