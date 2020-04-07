@@ -10,6 +10,10 @@ Notice: this repo needs to work with the tidb-dashboard backend, see detail in t
 
 ![](./art/statement_detail.png)
 
+### Statement 0.0.9
+
+![](./art/statement_0.0.9_overview.png)
+
 ## KeyVis
 
 ![](./art/keyvis.png)

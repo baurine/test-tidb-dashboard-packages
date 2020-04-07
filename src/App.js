@@ -4,14 +4,14 @@ import {
   // StatementsOverviewPage,
   // StatementDetailPage,
   RootComponent as StatementRootComponent,
-  translations as statementTranslations
+  translations as statementTranslations,
 } from '@pingcap-incubator/statement'
 import {
   KeyVis,
-  translations as keyvisTranslations
+  translations as keyvisTranslations,
 } from '@pingcap-incubator/keyvis'
 import DashboardClient, {
-  DefaultApi
+  DefaultApi,
 } from '@pingcap-incubator/dashboard_client'
 import * as authUtil from './auth'
 import * as i18nUtil from './i18n'
@@ -23,18 +23,20 @@ i18nUtil.init()
 i18nUtil.addTranslations(statementTranslations)
 i18nUtil.addTranslations(keyvisTranslations)
 
+const basePath = 'http://127.0.0.1:12333/dashboard/api'
+
 const dashboardClient = new DefaultApi({
-  basePath: 'http://127.0.0.1:12333/dashboard/api',
-  apiKey: () => authUtil.getAuthTokenAsBearer()
+  basePath,
+  apiKey: () => authUtil.getAuthTokenAsBearer(),
 })
-DashboardClient.setInstance(dashboardClient)
+DashboardClient.init(basePath, dashboardClient)
 DashboardClient.getInstance()
   .userLoginPost({
     username: 'root',
     password: '',
-    is_tidb_auth: true
+    is_tidb_auth: true,
   })
-  .then(r => authUtil.setAuthToken(r.data.token))
+  .then((r) => authUtil.setAuthToken(r.data.token))
 
 const App = () => (
   <Router>
